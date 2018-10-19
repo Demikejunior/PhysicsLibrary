@@ -39,6 +39,10 @@ public class Physics {
 		return (mass * Math.pow(velocity, 2)) / 2;
 	}
 	
+	public static double potentialEnergy(double mass, double height) {
+		return mass * G * height;
+	}
+	
 	/**
 	 * Calculates the necessary energy to change the temperature.
 	 * 
