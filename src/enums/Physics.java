@@ -43,6 +43,10 @@ public class Physics {
 		return mass * G * height;
 	}
 	
+	public static double fallSpeed(double height) {
+		return Math.sqrt(2 * G * height);
+	}
+	
 	/**
 	 * Calculates the necessary energy to change the temperature.
 	 * 
