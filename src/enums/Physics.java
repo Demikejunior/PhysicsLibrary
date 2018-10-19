@@ -47,6 +47,64 @@ public class Physics {
 		return Math.sqrt(2 * G * height);
 	}
 	
+	public static double delta(double first, double last) {
+		return last - first;
+	}
+	
+	public static double volumeToMass(FluidTable fluid, double volume) {
+		return fluid.density * volume;
+	}
+	
+	public static double volumeToMass(GasTable gas, double volume) {
+		return gas.density * volume;
+	}
+	
+	public static double volumeToMass(SolidTable solid, double volume) {
+		return solid.density * volume;
+	}
+	
+	public static double svtVelocity(double distance, double time) {
+		return distance / time;
+	}
+	
+	public static double svtDistance(double velocity, double time) {
+		return velocity * time;
+	}
+	
+	public static double svtTime(double distance, double velocity) {
+		return distance / velocity;
+	}
+	
+	public static double work(double force, double distance) {
+		return force / distance;
+	}
+	
+	public static double power(double work, double time) {
+		return work / time;
+	}
+	
+	public static double heat(SolidTable solid, double mass, double deltaT) {
+		return solid.heatCapacity * mass * (Math.abs(deltaT));
+	}
+	
+	public static double heat(FluidTable fluid, double volume, double deltaT) {
+		return fluid.heatCapacity * volume * fluid.density * (Math.abs(deltaT));
+	}
+	
+	public static double heat(GasTable gas, double volume, double deltaT) {
+		return gas.heatCapacity * volume * gas.density * (Math.abs(deltaT));
+	}
+	
+	public static double velocityToHeight(double velocity) {
+		return Math.pow(velocity, 2) / (2 * G);
+	}
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Calculates the necessary energy to change the temperature.
 	 * 
