@@ -28,8 +28,11 @@ public class Physics {
 	 */
 
 	public static double fluidPressure(FluidTable fluid, double depth) {
-		double pressure = fluid.density * G * depth;
-		return pressure;
+		return fluid.density * G * depth;
+	}
+	
+	public static double pressureUnderWater(double depth) {
+		return FluidTable.H2O.density * G * depth;
 	}
 	
 	/**
