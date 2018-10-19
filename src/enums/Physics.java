@@ -35,6 +35,10 @@ public class Physics {
 		return FluidTable.H2O.density * G * depth;
 	}
 	
+	public static double kineticEnergy(double mass, double velocity) {
+		return (mass * Math.pow(velocity, 2)) / 2;
+	}
+	
 	/**
 	 * Calculates the necessary energy to change the temperature.
 	 * 
