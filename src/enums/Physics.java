@@ -13,6 +13,9 @@ public class Physics {
 		return (fahrenheit - 32) / 1.8;
 	}
 	
+	public static double kelvinToCelsius(double kelvin) {
+		return kelvin - 273.15;
+	}
 	
 	/**
 	 * Calculates the fluid pressure in a specified fluid at a specified depth. 
