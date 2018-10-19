@@ -8,6 +8,7 @@ public class Physics {
 
 	
 	/**
+	 * Calculates the fluid pressure in a specified fluid at a specified depth. 
 	 * 
 	 * Parameter 1 is the type of fluid. 
 	 * Parameter 2 is how far down - in meters - that the pressure is measured
@@ -22,6 +23,7 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the necessary energy to change the temperature.
 	 * 
 	 * Parameter 1 is the type of fluid. 
 	 * Parameter 2 is the mass of that fluid. 
@@ -41,6 +43,7 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the necessary energy to change the temperature.
 	 * 
 	 * Parameter 1 is the type of gas. 
 	 * Parameter 2 is the mass of that gas. 
@@ -59,6 +62,7 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the necessary energy to change the temperature.
 	 * 
 	 * Parameter 1 is the type of solid. 
 	 * Parameter 2 is the mass of that solid. 
@@ -78,7 +82,13 @@ public class Physics {
 	
 	
 	
-	
+	/**
+	 * 
+	 * 
+	 * @param fluid
+	 * @param mass
+	 * @return
+	 */
 	
 	public static double meltingEnergy(FluidTable fluid, double mass) {
 		
