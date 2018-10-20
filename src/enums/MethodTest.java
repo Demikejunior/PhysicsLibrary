@@ -6,7 +6,7 @@ public class MethodTest {
 
 //		Fråga 1 - Hur mycket väger 80 dm^3 järn?
 		
-		System.out.println(Physics.volumeToMass(SolidTable.IRON, 0.08) + " kg/m^2");
+		System.out.println(Physics.volumeToMass(SolidTable.IRON, 0.008) + " kg");
 		
 //		Fråga 2 - Hur långt hinner Tomas om han löper med medelhastigheten 2.8 m/s i 60 minuter?
 		
@@ -37,7 +37,7 @@ public class MethodTest {
 		}
 		System.out.println(sol + " gånger");
 		
-//		Formulera en egen uppgift man kan lösa med hjälp av dina metoder.
+//		
 		
 		
 		
