@@ -75,8 +75,8 @@ public class Physics {
 		return distance / velocity;
 	}
 	
-	public static double work(double force, double distance) {
-		return force / distance;
+	public static double work(double mass, double acceleration) {
+		return mass * acceleration;
 	}
 	
 	public static double power(double work, double time) {
@@ -99,7 +99,9 @@ public class Physics {
 		return Math.pow(velocity, 2) / (2 * G);
 	}
 	
-	
+	public static double kilogramsToNewton(double kg) {
+		return kg * G;
+	}
 	
 	
 	
