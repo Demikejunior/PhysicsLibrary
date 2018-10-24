@@ -13,6 +13,10 @@ public class Physics {
 		return (fahrenheit - 32) / 1.8;
 	}
 	
+	public static double celsiusToFarenheit(double celsius) {
+		return celsius * 1.8 + 32;
+	}
+	
 	public static double kelvinToCelsius(double kelvin) {
 		return kelvin - 273.15;
 	}
@@ -102,10 +106,6 @@ public class Physics {
 	public static double kilogramsToNewton(double kg) {
 		return kg * G;
 	}
-	
-	
-	
-	
 	
 	/**
 	 * Calculates the necessary energy to change the temperature.
