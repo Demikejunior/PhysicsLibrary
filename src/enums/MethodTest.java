@@ -37,8 +37,14 @@ public class MethodTest {
 		}
 		System.out.println(sol + " gånger");
 
-//		
+//		I somras tog Anders fram en burk läsk (33cl) som stått i rumstemperatur (20 C).
+//		För att få läsken kallare la han den i 20 gram is - direkt från frysen (-18 C).
+//		Vilken temperatur fick läsken när all is smält? Givet att den enda värme överföringen är mellan läsken och isen.
 
+		double laskTemp = 20;
+		double iceTemp = (-18);
+		
+		
 //		Formulera en egen uppgift man kan lösa med hjälp av dina metoder.
 
 //		Formulera en egen uppgift man kan lösa med hjälp av dina metoder.

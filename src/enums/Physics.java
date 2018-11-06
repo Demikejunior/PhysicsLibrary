@@ -70,7 +70,19 @@ public class Physics {
 	public static double volumeToMass(SolidTable solid, double volume) {
 		return solid.density * volume;
 	}
+	
+	public static double massToVolume(FluidTable fluid, double mass) {
+		return mass / fluid.density;
+	}
 
+	public static double massToVolume(GasTable gas, double mass) {
+		return mass / gas.density;
+	}
+	
+	public static double massToVolume(SolidTable solid, double mass) {
+		return mass / solid.density;
+	}
+	
 	public static double svtVelocity(double distance, double time) {
 		return distance / time;
 	}
