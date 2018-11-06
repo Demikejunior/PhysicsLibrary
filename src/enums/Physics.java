@@ -22,9 +22,9 @@ public class Physics {
 	}
 
 	/**
-	 * Calculates the fluid pressure in a specified fluid at a specified depth.
+	 * Calculates the fluid pressure in a specified fluid at a specified depth. <br>
 	 * 
-	 * Parameter 1 is the type of fluid. Parameter 2 is how far down - in meters -
+	 * Parameter 1 is the type of fluid. <br> Parameter 2 is how far down - in meters -
 	 * that the pressure is measured
 	 * 
 	 * @param fluid
@@ -111,18 +111,48 @@ public class Physics {
 		return fluid.heatCapacity * volume * fluid.density * (Math.abs(deltaT));
 	}
 
+	/**
+	 * 
+	 * 
+	 * @param gas
+	 * @param volume
+	 * @param deltaT
+	 * @return
+	 */
+	
 	public static double heat(GasTable gas, double volume, double deltaT) {
 		return gas.heatCapacity * volume * gas.density * (Math.abs(deltaT));
 	}
 
+	/**
+	 * Calculates the peak of height that an object will get to in a vacuum from it's current velocity upwards
+	 * 
+	 * @param velocity
+	 * @return height
+	 */
+	
 	public static double velocityToHeight(double velocity) {
 		return Math.pow(velocity, 2) / (2 * G);
 	}
 
+	/**
+	 * Calculates the mass from the measured weight / force
+	 * 
+	 * @param n
+	 * @return kg
+	 */
+	
 	public static double kilogramsToNewton(double kg) {
 		return kg * G;
 	}
 
+	/**
+	 * Calculates the weight from the measured mass
+	 * 
+	 * @param n
+	 * @return kg
+	 */
+	
 	public static double newtonToKilograms(double n) {
 		return n / G;
 	}
@@ -138,9 +168,10 @@ public class Physics {
 	 * @param mass
 	 * @param startT
 	 * @param endT
+	 * @return E
 	 */
 
-	public static double heatEnergy(FluidTable fluid, double mass, double startT, double endT) {
+	public static double heat(FluidTable fluid, double mass, double startT, double endT) {
 
 		return fluid.heatCapacity * mass * (Math.abs(startT - endT));
 
@@ -157,8 +188,9 @@ public class Physics {
 	 * @param mass
 	 * @param startT
 	 * @param endT
+	 * @return E
 	 */
-	public static double heatEnergy(GasTable gas, double mass, double startT, double endT) {
+	public static double heat(GasTable gas, double mass, double startT, double endT) {
 
 		return gas.heatCapacity * mass * (Math.abs(startT - endT));
 
@@ -175,13 +207,24 @@ public class Physics {
 	 * @param mass
 	 * @param startT
 	 * @param endT
+	 * @return E
 	 */
-	public static double heatEnergy(SolidTable solid, double mass, double startT, double endT) {
+	public static double heat(SolidTable solid, double mass, double startT, double endT) {
 
 		return solid.heatCapacity * mass * (Math.abs(startT - endT));
 
 	}
 
+	/**
+	 * Calculates the necessary energy to change a fluid to a gas.
+	 * 
+	 * Parameter 1 is the type of fluid. Parameter 2 is the mass of that fluid.
+	 * 
+	 * @param fluid
+	 * @param mass
+	 * @return E
+	 */
+	
 	public static double boilingEnergy(FluidTable fluid, double mass) {
 
 		return fluid.steamEnthalpy * mass;
