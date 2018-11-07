@@ -364,6 +364,9 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the heat of a fluid from it's mass and energy. <br> <br>
+	 * 
+	 * 
 	 * 
 	 * @param fluid
 	 * @param mass
