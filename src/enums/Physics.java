@@ -428,7 +428,10 @@ public class Physics {
 	}
 
 	/**
-	 * Calculates the from the measured 
+	 * Calculates the weight from the measured mass
+	 * 
+	 * Parameter 1 is the weight of the object in newton. <br>
+	 * Returns the mass of that object in kilograms.
 	 * 
 	 * @param n
 	 * @return kg
@@ -439,7 +442,7 @@ public class Physics {
 	}
 
 	/**
-	 * Calculates the necessary energy to change the temperature. <br><br>
+	 * Calculates the energy necessary to change the temperature. <br><br>
 	 * 
 	 * Parameter 1 is the type of fluid. <br>
 	 * Parameter 2 is the mass of that fluid. <br>
@@ -458,7 +461,7 @@ public class Physics {
 	}
 
 	/**
-	 * Calculates the necessary energy to change the temperature. <br> <br>
+	 * Calculates the energy necessary to change the temperature. <br> <br>
 	 * 
 	 * Parameter 1 is the type of gas. <br>
 	 * Parameter 2 is the mass of that gas in kg. <br>
@@ -476,7 +479,7 @@ public class Physics {
 	}
 
 	/**
-	 * Calculates the necessary energy to change the temperature. <br> <br>
+	 * Calculates the energy necessary to change the temperature. <br> <br>
 	 * 
 	 * Parameter 1 is the type of solid. <br>
 	 * Parameter 2 is the mass of that solid in kg. <br>
@@ -496,14 +499,15 @@ public class Physics {
 	/**
 	 * Calculates the heat of a fluid from it's mass and energy. <br> <br>
 	 * 
-	 * Parameter 1 is the mass of the fluid. <br>
-	 * Parameter 2 is the energy of the fluid in joule. <br>
+	 * Parameter 1 is the type of fluid. <br>
+	 * Parameter 2 is the mass of the fluid. <br>
+	 * Parameter 3 is the energy in joule. <br>
 	 * Returns the heat of the fluid in celsius.
 	 * 
 	 * @param fluid
 	 * @param mass
 	 * @param energy
-	 * @return
+	 * @return heat
 	 */
 
 	public static double energyToHeat(FluidTable fluid, double mass, double energy) {
@@ -511,11 +515,17 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the heat of a gas from it's mass and energy. <br> <br>
+	 * 
+	 * Parameter 1 is the type of gas. <br>
+	 * Parameter 2 is the mass of the gas. <br>
+	 * Parameter 3 is the energy in joule. <br>
+	 * Returns the heat of the gas in celsius.
 	 * 
 	 * @param gas
 	 * @param mass
 	 * @param energy
-	 * @return
+	 * @return heat
 	 */
 
 	public static double energyToHeat(GasTable gas, double mass, double energy) {
@@ -523,11 +533,17 @@ public class Physics {
 	}
 	
 	/**
+	 * Calculates the heat of a solid from it's mass and energy. <br> <br>
+	 * 
+	 * Parameter 1 is the type of solid. <br>
+	 * Parameter 2 is the mass of the solid. <br>
+	 * Parameter 3 is the energy in joule. <br>
+	 * Returns the heat of the solid in celsius.
 	 * 
 	 * @param solid
 	 * @param mass
 	 * @param energy
-	 * @return
+	 * @return heat
 	 */
 
 	public static double energyToHeat(SolidTable solid, double mass, double energy) {
@@ -535,13 +551,15 @@ public class Physics {
 	}
 	
 	/**
-	 * Calculates the necessary energy to change a fluid to a gas. <br> <br>
+	 * Calculates the energy necessary to change a fluid to a gas, and vice versa. <br> <br>
 	 * 
-	 * Parameter 1 is the type of fluid. Parameter 2 is the mass of that fluid.
+	 * Parameter 1 is the type of fluid. <br>
+	 * Parameter 2 is the mass of that fluid. <br>
+	 * Returns the energy necessary to turn a fluid into a gas, and vice versa.
 	 * 
 	 * @param fluid
 	 * @param mass
-	 * @return energy
+	 * @return boilE
 	 */
 	
 	public static double boilingEnergy(FluidTable fluid, double mass) {
@@ -549,13 +567,15 @@ public class Physics {
 	}
 	
 	/**
-	 * Calculates the necessary energy to change a solid to a fluid. <br> <br>
+	 * Calculates the necessary energy to change a solid to a fluid, and vice versa. <br> <br>
 	 * 
-	 * Parameter 1 is the type of solid. Parameter 2 is the mass of that solid.
+	 * Parameter 1 is the type of solid. <br>
+	 * Parameter 2 is the mass of that solid. <br>
+	 * Returns the energy necessary to turn a solid into a fluid, and vice versa.
 	 * 
 	 * @param solid
 	 * @param mass
-	 * @return
+	 * @return meltE
 	 */
 	
 	public static double meltingEnergy(SolidTable solid, double mass) {
@@ -563,10 +583,13 @@ public class Physics {
 	}
 	
 	/**
-	 * Calculates
+	 * Grams to kilograms. <br> <br>
+	 * 
+	 * Parameter 1 is grams. <br>
+	 * Returns kilograms. <br>
 	 * 
 	 * @param g
-	 * @return
+	 * @return kilograms
 	 */
 	
 	public static double gToKg(double g) {
@@ -574,9 +597,13 @@ public class Physics {
 	}
 
 	/**
+	 * Kilograms to grams. <br> <br>
+	 * 
+	 * Parameter 1 is kilograms. <br>
+	 * Returns grams.
 	 * 
 	 * @param kg
-	 * @return
+	 * @return grams
 	 */
 	
 	public static double kgToG(double kg) {
@@ -584,9 +611,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic centimeters to cubic meters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic centimeters. <br>
+	 * Returns cubic meters.
 	 * 
 	 * @param cm
-	 * @return
+	 * @return m^3
 	 */
 	
 	public static double cmCbToMCb(double cm) {
@@ -594,9 +625,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic centimeters to cubic decimeters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic centimeters. <br>
+	 * Returns cubic decimeters.
 	 * 
 	 * @param cm
-	 * @return
+	 * @return dm^3
 	 */
 	
 	public static double cmCbToDmCb(double cm) {
@@ -604,9 +639,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic decimeters to cubic meters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic decimeters. <br>
+	 * Returns cubic meters.
 	 * 
 	 * @param dm
-	 * @return
+	 * @return m^3
 	 */
 	
 	public static double dmCbToMCb(double dm) {
@@ -614,9 +653,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic decimeters to cubic centimeters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic decimeters. <br>
+	 * Returns cubic centimeters.
 	 * 
 	 * @param dm
-	 * @return
+	 * @return cm^3
 	 */
 	
 	public static double dmCbToCmCb(double dm) {
@@ -624,9 +667,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic meters to cubic centimeters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic meters. <br>
+	 * Returns cubic centimeters.
 	 * 
 	 * @param m
-	 * @return
+	 * @return cm^3
 	 */
 	
 	public static double mCbToCmCb(double m) {
@@ -634,9 +681,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Cubic meters to cubic decimeters. <br> <br>
+	 * 
+	 * Parameter 1 is cubic meters. <br>
+	 * Returns cubic decimeters.
 	 * 
 	 * @param m
-	 * @return
+	 * @return dm^3
 	 */
 	
 	public static double mCbToDmCb(double m) {
@@ -644,19 +695,27 @@ public class Physics {
 	}
 	
 	/**
+	 * Square centimeters to square meters. <br> <br>
+	 * 
+	 * Parameter 1 is square centimeters. <br>
+	 * Returns square meters.
 	 * 
 	 * @param cm
-	 * @return
+	 * @return m^2
 	 */
 	
-	public static double cmSqrToMCb(double cm) {
-		return cm / 1000000;
+	public static double cmSqrToMsqr(double cm) {
+		return cm / 10000;
 	}
 	
 	/**
+	 * Square cenntimeters to square decimeters. <br> <br>
+	 * 
+	 * Parameter 1 is square centimeters. <br>
+	 * Returns square decimeters.
 	 * 
 	 * @param cm
-	 * @return
+	 * @return dm^2
 	 */
 	
 	public static double cmSqrToDmSqr(double cm) {
@@ -664,9 +723,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Square decimeters to square meters. <br> <br>
+	 * 
+	 * Parameter 1 is square decimeters. <br>
+	 * Returns square meters.
 	 * 
 	 * @param dm
-	 * @return
+	 * @return m^2
 	 */
 	
 	public static double dmSqrToMSqr(double dm) {
@@ -674,9 +737,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Square decimeters to square centimeters. <br> <br>
+	 * 
+	 * Parameter 1 is square decimeters. <br>
+	 * Returns square centimeters.
 	 * 
 	 * @param dm
-	 * @return
+	 * @return cm^2
 	 */
 	
 	public static double dmSqrToCmSqr(double dm) {
@@ -684,9 +751,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Square meters to square centimeters. <br> <br>
+	 * 
+	 * Parameter 1 is square meters. <br>
+	 * Returns square centimeters.
 	 * 
 	 * @param m
-	 * @return
+	 * @return cm^2
 	 */
 	
 	public static double mSqrToCmSqr(double m) {
@@ -694,9 +765,13 @@ public class Physics {
 	}
 	
 	/**
+	 * Square meters to square meters. <br> <br>
+	 * 
+	 * Parameter 1 is square meters. <br>
+	 * Returns square centimeters.
 	 * 
 	 * @param m
-	 * @return
+	 * @return dm^2
 	 */
 	
 	public static double mSqrToDmSqr(double m) {
