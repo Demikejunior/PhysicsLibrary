@@ -496,7 +496,9 @@ public class Physics {
 	/**
 	 * Calculates the heat of a fluid from it's mass and energy. <br> <br>
 	 * 
-	 * 
+	 * Parameter 1 is the mass of the fluid. <br>
+	 * Parameter 2 is the energy of the fluid in joule. <br>
+	 * Returns the heat of the fluid in celsius.
 	 * 
 	 * @param fluid
 	 * @param mass
